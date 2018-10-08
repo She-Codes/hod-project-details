@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Use the title from a page's frontmatter if it has one -->
+    <title>Purchase Order Application</title>
+    <link href="https://fonts.googleapis.com/css?family=BioRhyme:400,700,800|Cabin:400,500,600,700" rel="stylesheet">
+    <link href="../stylesheets/site.css" rel="stylesheet" />
+  </head>
+  <body class="projects projects_po-app">
+    <svg style="position: absolute; width: 0; height: 0; overflow: hidden" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <defs>
+        <symbol id="icon-home2" viewBox="0 0 32 32">
+          <title>home2</title>
+          <path d="M16 1l-16 16 3 3 3-3v13h8v-6h4v6h8v-13l3 3 3-3-16-16zM16 14c-1.105 0-2-0.895-2-2s0.895-2 2-2c1.105 0 2 0.895 2 2s-0.895 2-2 2z"></path>
+        </symbol>
+      </defs>
+    </svg>
+
+    <div class="wrapper">
+      <a href="../index.html" class="home-link">
+      <svg class="icon icon-home2"><use xlink:href="#icon-home2"></use></svg>
+    </a>
+      <header>
+  <h1>Purchase Order Application</h1>
+  <h2>Utilized by the Virginia House of Delegates Support Services to manage vendors and purchases.</h2>
+  <p>This application was an update of an older system created with Microsoft Sharepoint.  
+  The new version is built with Ruby on Rails, Bootstrap, vanilla JavaScript where possible and a bit of 
+  jQuery sprinkled throughout.</p>
+</header>
+
+<div class="examples">
+  <div class="explanation po-form">
+    <h3>Purchase Order Form</h3>
+    <p>The primary users of the application were very involved in the design of the form.  It is an updated version 
+  of a Sharepoint form that was created years ago and the user did not want to stray too far from the original design.  
+  The header of the page needed to remain very similar to the original as did other elements of the page, but fonts and 
+  other design elements were changed to give a more updated feel.  The main highlights would be the custom JavaScript 
+  typeahead written to fuzzy search vendor names and the dynamic order area.</p>
+  </div>
+  <div class="image"><img src='../images/po-form-new.png' alt="new po form"></div>
+
+  <div class="explanation po-typeahead">
+    <h3>Custom Built Typeahead</h3>
+    <p>Because the PO app contains sensitive information and actual vendor data is stored in the database, 
+    the Codepen to the right shows a demo of the same typeahead using almost the same code used in the app with 
+    data from an anime API. As with the widget in the app, you can use the up and down arrow keys to navigate the list
+    of results and press the Enter key to select one.  Alternatively you can use the mouse to scroll and select.</p>
+  </div>
+  <div class="image">
+    <p data-height="500" data-theme-id="light" data-slug-hash="KBQJpP" data-default-tab="result" data-user="she_codes" data-pen-title="vanilla js typeahead" class="codepen">See the Pen <a href="https://codepen.io/she_codes/pen/KBQJpP/">vanilla js typeahead</a> by Nikia Shaw (<a href="https://codepen.io/she_codes">@she_codes</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+  <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+  </div>
+
+  <div class="explanation po-adding-deleting-items">
+    <h3>Adding and Deleting Items</h3>
+    <p>When 'Add Item' is clicked, a new row is added to the actual 'Purchase Order' section of the form.  As numbers are added to the 'Qty' and 'Unit Cost' inputs, row totals,
+     as well as a grand total, are calculated using JavaScript.  An item can easily be deleted using the red trash can 
+     to the right.  Item is actually a nested Rails model that is being handled within the Purchase Order form with the help of JavaScript.</p>
+  </div>
+  <div class="image"><img src='../images/po-adding-deleting-items.gif' alt="po adding and deleting"></div>
+</div><!-- end .examples -->
+
+
+
+    </div>
+  </body>
+</html>

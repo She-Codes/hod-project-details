@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Use the title from a page's frontmatter if it has one -->
+    <title>iHOD Application</title>
+    <link href="https://fonts.googleapis.com/css?family=BioRhyme:400,700,800|Cabin:400,500,600,700" rel="stylesheet">
+    <link href="../stylesheets/site.css" rel="stylesheet" />
+  </head>
+  <body class="projects projects_ihod-app">
+    <svg style="position: absolute; width: 0; height: 0; overflow: hidden" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <defs>
+        <symbol id="icon-home2" viewBox="0 0 32 32">
+          <title>home2</title>
+          <path d="M16 1l-16 16 3 3 3-3v13h8v-6h4v6h8v-13l3 3 3-3-16-16zM16 14c-1.105 0-2-0.895-2-2s0.895-2 2-2c1.105 0 2 0.895 2 2s-0.895 2-2 2z"></path>
+        </symbol>
+      </defs>
+    </svg>
+
+    <div class="wrapper">
+      <a href="../index.html" class="home-link">
+      <svg class="icon icon-home2"><use xlink:href="#icon-home2"></use></svg>
+    </a>
+      <header>
+  <h1>iHOD Application</h1>
+  <h2>Virginia House of Delegates Interactive legislation tracking application.</h2>
+  <p>Development on this app was already in progress when I began working with the House of Delegates and the overall design had already been established.  jQuery Mobile was used for the frontend as a solution for making the app accessible for the many delegates who access it using their House-issued iPads.  The backend was built using Rails.  
+  In addition to delegates and their staff, the app is widely used throughout the organization to accomplish department-specific tasks during a legislative session.  I contributed to building out certain department-specific features of the app including those used by the Enrolling and Tracking department and Committee Operations.  I also contributed to the 
+  frontend functionality of some of the overall bill tracking features.</p>
+</header>
+
+<div class="examples">
+  <div class="explanation ihod-agenda-form">
+    <h3>Agenda Form</h3>
+    <p>One of the key features of iHOD is the ability to set agendas for committee meetings.  A major component of the form is the ability to add 'blocks' of bills to a meeting agenda.  An example of the Agenda Block section is pictured below.</p>
+  </div>
+  <div class="image"><img src='../images/iHOD-agendas.png' alt="ihod agendas"></div>
+
+  <div class="explanation ihod-adding-deleting-bills">
+    <h3>Adding and Deleting Bills</h3>
+    <p>Users are able to define 'blocks' that will then be addressed in committee meetings.  The available committee bills are fetched from the API and cached. The user can select bills to add using the modal.  When bills are deleted from 
+    the block they are again available for selection.</p>
+  </div>
+  <div class="image"><img src='../images/ihod-adding-deleting-bills.gif' alt="ihod adding and deleting"></div>
+
+  <div class="explanation ihod-sorting-bills">
+    <h3>Sorting Bills in a Block</h3>
+    <p>Custom written JavaScript allows the sorting of bills in a block.  Bills are sorted alphabetically either by bill number or patron name.  A custom sort 
+    is also available with the help of jQuery UI's drag and drop widget.</p>
+  </div>
+  <div class="image"><img src='../images/ihod-sorting-bills.gif' alt="ihod sorting"></div>
+
+  <div class="explanation ihod-adding-deleting-block">
+    <h3>Adding and Deleting a Block</h3>
+    <p>Not only bills, but blocks as well, can be added to an agenda and deleted.</p>
+  </div>
+  <div class="image"><img src='../images/ihod-adding-deleting-block.gif' alt="ihod adding and deleting blocks"></div>
+
+  <div class="explanation ihod-reordering-blocks">
+    <h3>Reordering Blocks</h3>
+    <p>Because blocks can often get quite large, drag and drop was not feasible and would've made it more difficult 
+    for the user to reorder blocks due to the increase in dragging distance.  Instead, the blocks can be reordered in the DOM one by one using arrow buttons.</p>
+  </div>
+  <div class="image"><img src='../images/ihod-reordering-blocks.gif' alt="ihod reordering blocks"></div>
+
+  <div class="explanation ihod-moving-bills-between-blocks">
+    <h3>Moving Bills Between Blocks</h3>
+    <p>Again, because of the potentially large size of blocks, I decided against drag and drop for moving bills from one block to another. 
+    Once the bills to be moved are selected, all that's needed is to select the destination block.</p>
+  </div>
+  <div class="image"><img src='../images/ihod-moving-bills-between-blocks.gif' alt="ihod moving bills between blocks"></div>
+
+  <div class="explanation ihod-form-validation">
+    <h3>Form Validation</h3>
+    <p>The form is validated with Rails, but there is also JavaScript validation in place.  Users can select block types, but Doc and Link blocks can not contain 
+    bills. As long as the block has bills, the block type can not be changed.</p>
+  </div>
+  <div class="image"><img src='../images/ihod-form-validation.gif' alt="ihod form validation"></div>
+
+  <div class="explanation ihod-enrolling-memo">
+    <h3>Enrolling Memo Form</h3>
+    <p>The Enrolling and Tracking department needed specialized forms, as well.  The form used to draft an enrolling memo is one example.  A list of 
+    bills was fetched from the API and cached.  Using mouse events bills are easily highlighted and selected.  Bills of a specified type can be filtered using the checkbox 
+    on the left and all bills can be cleared using the button on the right. </p>
+  </div>
+  <div class="image"><img src='../images/ihod-enrolling-memo.gif' alt="ihod enrolling memo"></div>
+</div><!-- end .examples -->
+
+
+
+    </div>
+  </body>
+</html>

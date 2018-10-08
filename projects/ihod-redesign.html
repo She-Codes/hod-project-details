@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Use the title from a page's frontmatter if it has one -->
+    <title>IHOD Redesign</title>
+    <link href="https://fonts.googleapis.com/css?family=BioRhyme:400,700,800|Cabin:400,500,600,700" rel="stylesheet">
+    <link href="../stylesheets/site.css" rel="stylesheet" />
+  </head>
+  <body class="projects projects_ihod-redesign">
+    <svg style="position: absolute; width: 0; height: 0; overflow: hidden" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <defs>
+        <symbol id="icon-home2" viewBox="0 0 32 32">
+          <title>home2</title>
+          <path d="M16 1l-16 16 3 3 3-3v13h8v-6h4v6h8v-13l3 3 3-3-16-16zM16 14c-1.105 0-2-0.895-2-2s0.895-2 2-2c1.105 0 2 0.895 2 2s-0.895 2-2 2z"></path>
+        </symbol>
+      </defs>
+    </svg>
+
+    <div class="wrapper">
+      <a href="../index.html" class="home-link">
+      <svg class="icon icon-home2"><use xlink:href="#icon-home2"></use></svg>
+    </a>
+      <header>
+  <h1>IHOD Redesign</h1>
+  <h2>Currently In Progress.</h2>
+  <p>IHOD was originally built using Ruby on Rails for the backend and jQuery Mobile for the frontend.  
+  Having been several years since the app was originally built I felt it was time to update the 
+  frontend of the app.  The new face of IHOD is currently in progress using Bootstrap, jQuery and as much vanilla JavaScript as possible. We are a small team and 
+  did not want to use a JavaScript framework such as React since most of the team is unfamiliar and the timeframe did not allow for everyone to get up to speed.  We also felt that 
+  the needs of the app could be met just fine minus a framework as long as code was modularized and written cleanly.  
+  I made the decision to keep the color scheme similar as users in the organization tend to be generally averse to too much change at once.</p>
+</header>
+
+<div class="examples">
+  <h3 class="all-bills">All Bills</h3>
+  <p class="description all-bills">The All Bills view is a list of bills that can be toggled between category types, and where 
+  additional information such as comments and staff summaries can be toggled on and off.  There is a filter for the list 
+  which was rewritten using vanilla JavaScript since the jQuery Mobile widget would no longer be used.  Comment and Staff Summary 
+  elements are only filtered when they are turned on.  Removing some buttons and labels and left-aligning 
+  everything I felt gave the header area a less cluttered look.  The list itself was not changed much.  
+  Below the original view is shown first, followed by the updated version.</p>
+  <div class="image all-bills"><img src='../images/iHOD-all-bills2.png' alt="ihod all bills"></div>
+  <div class="image all-bills"><img src='../images/iHOD-all-bills-redesign.png' alt="ihod all bills redesign"></div>
+
+  <h3 class="all-bills-comments">All Bills View With Comments</h3>
+  <p class="description all-bills-comments">As mentioned above, the list was not changed much other than giving a uniform 
+  background to the entire list.  I also felt that removing the circular background from 
+  the comments created a less cluttered look.</p>
+  <div class="image all-bills-comments"><img src='../images/iHOD-all-bills-comments.png' alt="ihod all bills with comments"></div>
+  <div class="image all-bills-comments"><img src='../images/iHOD-all-bills-comments-redesign.png' alt="ihod all bills with comments redesign"></div>
+
+  <h3 class="viewing-comments">Viewing Comments</h3>
+  <p class="description viewing-comments">Bill comments are one example of several areas within the app 
+  where the user is navigated to a new page to display a small amount of information.  In the new version this 
+  is resolved with the use of modals.</p>
+  <div class="image viewing-comments"><img src='../images/iHOD-comment-show.png' alt="ihod comment show view"></div>
+  <div class="image viewing-comments"><img src='../images/iHOD-comment-show-redesign.png' alt="ihod comment show view redesign"></div>
+
+  <h3 class="editing-deleting-comments">Editing and Deleting Comments</h3>
+  <p class="description editing-deleting-comments">Taking it a step further, keeping the user on the same page 
+  not just for viewing a comment, but for editing and deleting it as well creates a more seamless experience for the user.</p>
+  <div class="image"><img src='../images/ihod-edit-comment-redesign.gif' alt="ihod redesign edit comment"></div>
+  <div class="image"><img src='../images/ihod-delete-comment2.gif' alt="ihod redesign delete comment"></div>
+</div><!-- end .examples -->
+
+
+
+    </div>
+  </body>
+</html>
